@@ -157,7 +157,6 @@ nav a.top:hover:after {
 header.page {
   text-align: center;
   padding: 30px;
-  /*height: 90vh;*/
   background-color: #fff;
 }
 
@@ -1086,6 +1085,12 @@ address:before {
   border-radius: 4px;
 }
 
+
+@media(min-height: 500px) {
+  .page {
+    min-height: 95vh;
+  }
+}
 
 @media(max-width: 900px) {
 
