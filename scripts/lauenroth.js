@@ -4,7 +4,7 @@
 var isMobile = jQuery.browser.mobile;
 
 /* IE sucks */
-var ieSucks = $('body').hasClass('ie-sucks');
+var ieSucks = $('body').hasClass('iesucks');
 
 /* scroll to anchor */
 $("nav a").click(function(e) {
@@ -483,6 +483,10 @@ slideshow.find('.play').on('click', function(){
       }
 
     });
+  }
+  
+  if (ieSucks) {
+    $('#apps .select-app .active').trigger('click');
   }
 })(jQuery);
 
