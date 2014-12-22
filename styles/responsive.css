@@ -1,0 +1,328 @@
+@media(min-height: 500px) {
+  .page {
+    min-height: 95vh;
+  }
+}
+
+@media(max-width: 900px) {
+
+  #toggle-menu {
+    position: fixed;
+    right: 15px;
+    top: 15px;
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 5px 10px;
+    cursor: pointer;
+    opacity: .6;
+    transition: .3s;
+    z-index: 1000;
+  }
+  #toggle-menu:before {
+    content: "Menu";
+  }
+  #toggle-menu:hover {
+    opacity: 1;
+    border-color: #ccc;
+  }
+  #toggle-menu:focus {
+    background-color: red;
+  }
+  nav ul {
+    position: fixed;
+    height: 100%;
+    width: 200px;
+    left: auto;
+    top: 0;
+    right: -205px;
+    transition: .3s;
+    background-color: #2F3640;
+    box-shadow: 0 0 10px #000;
+  }
+  nav li {
+    display: block;
+  }
+  nav a {
+    text-align: left;
+    border-bottom: 1px solid #49505A;
+  }
+  nav a:after {
+    display: none;
+  }
+  nav a.top {
+    padding-left: 30px;
+  }
+  nav a.top span {
+    text-align: center;
+  }
+
+  #show-menu:checked + nav ul {
+    right: 0;
+  }
+  #show-menu:checked + nav + label {
+    opacity: 0;
+    display: none;
+  }
+  #show-menu:checked + nav + label + #modal {
+    display: block;
+    visibility: visible;
+    right: 200px;
+  }
+
+  #show-menu:after {
+    background-color: red;
+    display: block;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+
+  #apps .mobile {
+    transform: scale(.9);
+    margin-top: -35px;
+    margin-right: -20px;
+    margin-left: 10px;
+  }
+
+  #apps .screen {
+    transform: scale(.9);
+    margin-right: -35px;
+    margin-top: -25px;
+  }
+
+}
+
+@media(min-width: 850px) {
+  #contact address:before {
+    content: 'Click here to send post card ->';
+  }
+  nav {
+    -webkit-animation: fade-in-down-arrow 4s;
+    animation: fade-in-down-arrow 4s;
+  }
+}
+
+
+@media(min-width: 750px) and (max-width: 975px) {
+  #skills .box {
+    width: 48%;
+  }
+  #skills .web,
+  #skills .box:last-of-type {
+    margin-right: 0;
+  }
+  #skills .db {
+    clear: both;
+  }
+}
+
+@media(min-width: 750px) {
+  #hobbies section:hover {
+    
+    -webkit-animation: shake 1s;
+    animation: shake 1s;
+  }
+
+
+  @-webkit-keyframes shake {
+    
+    25% {
+      -ms-transform: rotate(5deg);
+      -webkit-transform: rotate(5deg);
+      transform: rotate(5deg);
+    }
+    75% {
+      -ms-transform: rotate(-5deg);
+      -webkit-transform: rotate(-5deg);
+      transform: rotate(-5deg);
+    }
+    
+  }
+
+  #about p {
+    margin-right: 320px;
+  }
+}
+
+@media(max-width: 750px) {
+
+  .page {
+    padding: 15px;
+  }
+  #skills .box {
+    width: 100%;
+  }
+  #skills .web {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  #work .timeline,
+  #education .timeline {
+    margin-top: 90px;
+  }
+  #work .description,
+  #education .description {
+    float: none;
+    width: 100%;
+  }
+
+  #work .timeline > li,
+  #education .timeline > li {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  #work .timeline:before,
+  #education .timeline:before {
+    content: "Timeline";
+  }
+  #education > ul {
+    padding-left: 0;
+  }
+  .timeline .box:after,
+  .timeline .box:before {
+    display: none;
+  }
+
+  #apps .mobile {
+    transform: scale(.8);
+    margin-top: -75px;
+    margin-right: -20px;
+  }
+  #apps .screen {
+    transform: scale(.8); 
+    margin-right: -35px;
+    margin-top: -40px;
+  }
+
+  #about .hobbies,
+  #about .more {
+    margin-right: 320px;
+  }
+}
+
+@media(max-width: 700px) {
+  #apps .select-app {
+    height: 35px;
+  }
+  #apps .select-app li {
+    font-size: .8em;
+  }
+  #contact address:before {
+    content: 'Click here ->';
+  }
+}
+
+@media(max-width: 650px) {
+
+  #hobbies section {
+    width: 100%;
+    float: none;
+    height: auto;
+  }
+
+  #contact address {
+    width: 100%;
+    float: none;
+    display: none;
+  }
+
+  #contact fieldset {
+    padding: 15px;
+  }
+
+  #contact fieldset div {
+    width: 100%;
+    border: none;
+  }
+  #contact textarea,
+  #contact input {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  #contact input {
+    padding-right: 100px;
+  }
+
+  #contact button {
+    width: 80px;
+    height: 80px;
+    position: static;
+    float: right;
+    margin-top: -60px;
+  }
+
+  #apps .screen {
+    float: none;
+    transform: scale(0.7)!important;
+    margin-left: -80px;
+  }
+}
+
+
+@media(max-width: 550px) {
+  #apps .mobile {
+    float: none;
+    width: 340px;
+    margin: -40px auto 40px;
+    transform: scale(.9);
+  }
+  #apps .mobile.animate {
+    left: 0;
+    top: 30px;
+  }
+  #apps .description {
+    margin-top: -60px;
+  }
+
+  #me {
+    transform: scale(.8);
+    bottom: -59px;
+    right: -45px;
+  }
+  #about .hobbies,
+  #about .more {
+    margin-right: 250px;
+  }
+}
+
+@media(max-width: 500px) {
+
+  #apps .select-app {
+    height: 30px;
+  }
+  #apps .select-app li {
+    font-size: .6em;
+  }
+  
+  h1 {
+    font-size: 1.6em;
+  }
+
+  #contact ul {
+    height: 145px;
+  }
+  #contact li:nth-child(2n) {
+    position: relative;
+    top: 130px;
+    left: -70px;
+  }
+  
+}
+
+@media(max-width: 400px) {
+  #apps .mobile {
+    max-width: 100%;
+    margin-left: -5%;
+  }
+
+  #about .hobbies {
+    margin-right: 0;
+  }
+}
