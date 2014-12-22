@@ -4,11 +4,6 @@
     @content;
   }
 }
-@mixin mediaMax($max){
-  @media #{"(max-width: $max)"} {
-    @content;
-  }
-}
 
 /* General */
 body {
@@ -971,7 +966,7 @@ section.page > div {
   .github {
     a:hover,
     a:after {
-      background-color: #303741;
+      background-color: #49505A;
     }
     a:after {
       content: "Github";
